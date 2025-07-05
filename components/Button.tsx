@@ -4,9 +4,10 @@ import {FontAwesome} from "@expo/vector-icons";
 type Props = {
     label: string
     theme?: 'primary'
+    onPress?: () => void
 }
 
-const Btn = ({label,theme}:Props)=>{
+const Btn = ({label,theme,onPress}:Props)=>{
 
     if (theme === 'primary') {
         return (
@@ -17,7 +18,7 @@ const Btn = ({label,theme}:Props)=>{
                 ]}>
                 <Pressable
                     style={[styles.button, { backgroundColor: '#fff' }]}
-                    onPress={() => alert('You pressed a button.')}>
+                    onPress={onPress}>
                     <FontAwesome name="picture-o" size={18} color="#25292e" style={styles.buttonIcon} />
                     <Text style={[styles.buttonLabel, { color: '#25292e' }]}>{label}</Text>
                 </Pressable>
