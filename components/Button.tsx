@@ -30,8 +30,7 @@ const Btn = ({label,theme,onPress}:Props)=>{
         <View style={styles.buttonContainer}>
             <Pressable
                 style={styles.button}
-                onPress={()=> alert('Has presionado el boton')
-            }>
+                onPress={onPress}>
                 <Text style={styles.buttonLabel}>{label}</Text>
             </Pressable>
         </View>
